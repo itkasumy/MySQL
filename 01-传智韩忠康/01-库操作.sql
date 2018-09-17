@@ -8,7 +8,7 @@ SHOW databases [like 'pattern'];
 SHOW CREATE DATABASE db_name;
 
 -- 数据库删除
-DROP DATABASE db_name;
+DROP DATABASE [if exists] db_name;
 
 -- 修改数据库信息
 ALTER DATABASE db_name [修改指令];
