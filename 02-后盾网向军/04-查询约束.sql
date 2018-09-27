@@ -20,3 +20,14 @@ select * from stu order by birthday limit 4;
 select sname, birthday from stu order by birthday asc limit 1;
 select sname, birthday from stu order by birthday asc;
 select sname, birthday from stu order by birthday asc limit 1, 1;
+
+update stu set birthday = "1987-12-12" where id = 5;
+select * from stu order by birthday;
+
+-- 查找年龄最大的两个人
+select * from stu order by birthday asc limit 2;
+select * from stu where birthday <= (select birthday from stu order by birthday limit 1, 1);
+
+-- 得到学生都是那年生人
+select year(birthday) from stu;
+select distinct year(birthday) as "出生年份" from stu;
